@@ -87,6 +87,6 @@ class HomeController extends Controller
     {
 
         Newsletter::create(['email' => $request->newsletter_email]);
-        return back()->with('success', 'Thanks for subscibing to PUFFLEX newsletter', 'succes');
+        return back()->with('success', 'Thanks for subscibing to NEBO newsletter', 'succes');
     }
 }

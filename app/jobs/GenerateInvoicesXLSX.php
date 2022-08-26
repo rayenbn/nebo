@@ -133,8 +133,8 @@ class GenerateInvoicesXLSX implements ShouldQueue
      */
     public function handle()
     {
-        $this->drawing->setName('pufflex.com');
-        $this->drawing->setDescription('pufflex.com');
+        $this->drawing->setName('neboecig.com');
+        $this->drawing->setDescription('neboecig.com');
         $this->drawing->setPath(public_path('/theme/logo.png'));
         $this->drawing->setCoordinates('L4');
         $this->drawing->setOffsetY(0);
@@ -178,7 +178,7 @@ class GenerateInvoicesXLSX implements ShouldQueue
     private function setPropertiesSheet()
     {
         $this->getActiveSheet()->setTitle($this->invoiceNumber, false);
-        $this->spreadsheet->getProperties()->setCreator(env('APP_NAME', 'pufflex.com'));
+        $this->spreadsheet->getProperties()->setCreator(env('APP_NAME', 'neboecig.com'));
     }
 
     /**

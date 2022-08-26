@@ -106,7 +106,7 @@
         @if ($galleries->count() > 0)
         <section class="section-team">
             <div class="container">
-                <h3 class="section-title text-center">Pufflex Factory</h3>
+                <h3 class="section-title text-center">NEBO Factory</h3>
                 <!-- Gallery -Photo -->
                 <div class="gallery gallery-lightbox gallery-photos gallery-filled hover-zoom">
 

@@ -152,7 +152,9 @@
                 nextArrow: '<button class="slide-arrow next-arrow"><i class="feather-arrow-right"></i></button>'
             });
             $('.slider-activation').not('.slick-initialized').slick({
-                infinite: true,
+                infinite: false,
+                autoplay: true,
+                autoplaySpeed: 2500,
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 dots: true,

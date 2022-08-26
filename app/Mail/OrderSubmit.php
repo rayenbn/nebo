@@ -46,7 +46,7 @@ class OrderSubmit extends Mailable
             ->from(config('mail.from.address'), config('mail.from.name'))
             ->bcc(['arafet@neboecig.com'], 'Disposable cigarette factory')
             ->replyTo($this->data->email, $this->data->name)
-            ->subject('PUFFLEX Production Order Confirmation')
+            ->subject('NEBO Production Order Confirmation')
             ->with([
                 'invoiceName' => (isset($info) && $info->invoice_name) ? $info->invoice_name : 'Non stated',
                 // 'files'       => ($files->getRecentFiles() !== null) ? $files->getRecentFiles() : null,
