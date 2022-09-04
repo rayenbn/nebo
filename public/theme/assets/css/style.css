@@ -15366,9 +15366,9 @@ body.active-light-mode .slider-area.bg-transparent .inner button.btn-default.btn
 /*# sourceMappingURL=../maps/style.css.map */
 
 .age-popup{
-  background-color: #ffffff;
-  width: 450px;
-  padding: 30px 40px;
+  background-color: #00000047;
+  width: 550px;
+  padding: 20px 30px;
   position: absolute;
   transform: translate(-50%,-50%);
   left: 50%;
@@ -15383,19 +15383,17 @@ body.active-light-mode .slider-area.bg-transparent .inner button.btn-default.btn
   position: relative;
   margin: 10px auto;
   text-align: center;
-  background-color: #0f72e5;
-  color: #ffffff;
+  border: 2px solid #2ca66d;
+  border-radius: 40px;
+  color: #2ca66d;
   text-decoration: none;
   padding: 7px 0;
-  border: none;
+  background: none;
 }
 .age-popup p{
-  font-size: 16px;
-  text-align: justify;
   margin: 20px 0;
   line-height: 25px;
-  font-weight: bold;
-  color: #000;
+  text-align: center;
 }
 .age-popup a{
   display: block;
@@ -15403,8 +15401,21 @@ body.active-light-mode .slider-area.bg-transparent .inner button.btn-default.btn
   position: relative;
   margin: 10px auto;
   text-align: center;
-  background-color: #0f72e5;
-  color: #ffffff;
+  border: 2px solid #ea4e5d;
+  border-radius: 40px;
+  color: #ea4e5d;
   text-decoration: none;
   padding: 5px 0;
+}
+@media only screen and (max-width: 767px) {
+  .age-popup p {
+    margin: 0 0 20px;
+    font-size: 12px;;
+    line-height: var(--line-height-b2);
+  }
+
+  .age-popup{
+    width: 90%;
+    padding: 0px;
+  }
 }

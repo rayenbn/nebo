@@ -16,6 +16,7 @@ use App\Blog;
 use App\Gallery;
 use App\Newsletter;
 use App\PrivacyPolicy;
+use App\VerificationCode;
 
 class HomeController extends Controller
 {
@@ -87,6 +88,22 @@ class HomeController extends Controller
     {
 
         Newsletter::create(['email' => $request->newsletter_email]);
-        return back()->with('success', 'Thanks for subscibing to NEBO newsletter', 'succes');
+        return back()->with('success', 'Thanks for subscibing to NEBO newsletter', 'success');
     }
+
+    function verifyProduct(Request $request){
+        $verif = VerificationCode::where([['code', $request->code],['status', 0]])->first();
+
+        if ($verif){
+
+            // $verif->update(['status',1]);
+            $verif->status = 1;
+            $verif->save();
+            
+            return view('frontend.product_verification', ['response' => 'exist']); 
+        }
+
+        return view('frontend.product_verification', ['response' => 'old_code']); 
+    }
+
 }

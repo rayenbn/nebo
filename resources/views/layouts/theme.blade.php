@@ -59,43 +59,18 @@
 	<!-- End Top To Bottom Area  -->
 	
 	<div class="age-popup" id="age-popup">
-        <img src="{{ asset('theme/assets/images/age-restriction.png') }}" width="50%">
-        <h3 style="color: red;">YOUTH PEVENTION</h3> 
-        <p>
-        This product is not intended for sale or use to those <span style="color: red">under 21 years of age</span>. This Product contains nicotine. Nicotine is an addictive chemical.
-        </p>
+        <!-- <img src="{{ asset('theme/assets/images/age-restriction.png') }}" width="50%">
+        <h3 style="color: red;">YOUTH PEVENTION</h3>  -->
+        <p>To use the Nebo website you must be aged 21 years or over. Please verify your age before entering the site.</p>
+		<p>We use cookies to improve our website and your experience browsing it. By continuing to browse our website you accept our Cookie Policy.</p>
         <div style="display: flex;">
-            <button class="popup-age-accepted" id="close">Yes</button>
-            <a href="https://google.com">No, I'm younger than 21</a>
+            <!-- <button class="popup-age-accepted" id="close">Yes</button>
+            <a href="https://google.com">No, I'm younger than 21</a> -->
+			<a class="btn-small round" href="https://bing.com">under 21</a>
+			<button class="btn-small round popup-age-accepted" id="close">21+</button>
         </div>
+		<p style="color: #2ca66d; font-size: 12px;margin-top: 20px">WARNING: This product contains nicotine. Nicotine is an addictive chemical.</p>
     </div>
-
-
-    <!-- form itself -->
-<form  class="mfp-hide white-popup-block">
-	<h1>Form</h1>
-	<fieldset style="border:0;">
-		<p>Lightbox has an option to automatically focus on the first input. It's strongly recommended to use <code>inline</code> popup type for lightboxes with form instead of <code>ajax</code> (to keep entered data if the user accidentally refreshed the page).</p>
-		<ol>
-			<li>
-				<label for="name">Name</label>
-				<input id="name" name="name" type="text" placeholder="Name" required="">
-			</li>
-			<li>
-				<label for="email">Email</label>
-				<input id="email" name="email" type="email" placeholder="example@domain.com" required="">
-			</li>
-			<li>
-				<label for="phone">Phone</label>
-				<input id="phone" name="phone" type="tel" placeholder="Eg. +447500000000" required="">
-			</li>
-			<li>
-				<label for="textarea">Textarea</label><br>
-				<textarea id="textarea">Try to resize me to see how popup CSS-based resizing works.</textarea>
-			</li>
-		</ol>
-	</fieldset>
-</form>
 
 	{{--  <!-- <form id="logoutform" action="{{ route('logout') }}" method="POST" style="display: none;">
 		{{ csrf_field() }}

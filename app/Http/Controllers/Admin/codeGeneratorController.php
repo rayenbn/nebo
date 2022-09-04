@@ -26,7 +26,7 @@ class codeGeneratorController extends Controller
     public function codeList(Request $request)
     {
         // $db_data = VerificationCode::select('code')->get()->toArray();
-        $nb = 10000;
+        $nb = 2000;
         $chunks = intdiv($nb, 1000);
         
 
@@ -54,7 +54,8 @@ class codeGeneratorController extends Controller
         for ($i = 0; $i < $nb; $i++){
             $data = [
                 'code' => $codes[$i],
-                'created_at' => now()->toDateTimeString()
+                'created_at' => now()->toDateTimeString(),
+                'updated_at' => now()->toDateTimeString(),
             ]; 
             array_push($codesArray, $data);
         }

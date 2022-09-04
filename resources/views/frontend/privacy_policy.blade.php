@@ -1,44 +1,27 @@
 @extends('layouts.theme')
 @section('content')
 
-<div class="page-content">	
-    <!-- Breadcrumbs -->
-    <nav aria-label="breadcrumb" class="page-breadcrumb">
-        <div class="container">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="/">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Privacy Policy</li>
-            </ol>
-        </div>
-    </nav>				
-    <div class="product-detail">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="product-view">
-                        <div class="product-detail">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-2"></div>
-                                        <div class="col-md-8">
-                                            <div class="product-view">
-                                                <h3 class="section-title text-center">{{ $privacy->title ?? ''}}</h3>
-                                                <br>
-                                                <br>
-                                                {!! $privacy->content ?? '' !!}
-                                        
-                                            </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    
+ <!-- Start Service__Style--1 Area  -->
+ <div class="rn-service-area rn-section-gap">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title text-center" data-sal="slide-up" data-sal-duration="700" data-sal-delay="100">
+                    <!-- <h4 class="subtitle">
+                        <span class="theme-gradient">Approved product</span>
+                    </h4> -->
+                    <h2 class="title w-600 mb--20">{{ $privacy->title ?? ''}}</h2>
+                    <!-- <p class="description b1">Thank you for choosing NEBO</p> -->
                 </div>
             </div>
         </div>
+
+        <div class="row row--15 service-wrapper">
+            {!! $privacy->content ?? '' !!}
+        </div>
     </div>
 </div>
+<!-- End Service__Style--1 Area  -->
+
 
 @endsection

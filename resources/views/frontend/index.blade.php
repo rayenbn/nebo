@@ -236,14 +236,20 @@
                                             <h5 class="title">Please enter the 16-digit security code</h5>
                                             <h6 class="subtitle mb-4" style="font-size: 1.2rem;">Locate the security label, like the one shown below, <br>on the package and  remove the scratch off coating to see the code.</h6>
                                             <div class="row justify-content-center">
-                                                <div class="col-lg-8 col-md-12 col-12">
-                                                    <div class="rnform-group"><input type="text" placeholder="Place security code here"></div>
-                                                </div>
-                                                <div class="col-lg-4 col-md-12 col-12">
-                                                    <div class="call-to-btn text-center">
-                                                        <a class="btn-default btn-icon" target="_blank" href="#">Submit</a>
+                                                <form action="{{ url('verify-code') }}" method="post">
+                                                    {{ csrf_field() }}
+                                                    <div class="col-lg-8 col-md-12 col-12">
+                                                        <div class="rnform-group">
+                                                            <input type="text" name="code" minlength="16" placeholder="Place security code here">
+                                                        </div>
                                                     </div>
-                                                </div>
+                                                    <div class="col-lg-4 col-md-12 col-12">
+                                                        <div class="call-to-btn text-center">
+                                                            <button class="btn-default btn-icon" type="submit">Verify</button>
+                                                        </div>
+                                                    </div>
+                    							</form>
+
                                             </div>
                                             
                                         </div>

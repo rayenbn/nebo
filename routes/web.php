@@ -34,7 +34,9 @@ Route::group(['namespace' => 'Frontend'], function () {
     Route::post('newsletter/subscribe', 'HomeController@newsletterSubscribe');
     
     Route::post('/search', 'HomeController@search')->name('search');
-
+    
+    Route::post('/verify-code', 'HomeController@verifyProduct')->name('verify-code');
+    
     // Route::get('/cart', 'cartController@index')->name('shoppingcart');
     // Route::post('/add-to-cart', 'cartController@store');
     // Route::get('/submit_order','cartController@submitOrder')->name('orders.submit');
