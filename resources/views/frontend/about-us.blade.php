@@ -52,7 +52,7 @@
                         @endif
                     </div>
                     <div style="width: 100%; text-align: center;">
-                        <img src="{{ asset('img/certificates.png')}}" alt="pufflex certificates"/>
+                        <img src="{{ asset('img/certificates.png')}}" alt="Nebo certificates"/>
                     </div>
                 </div>
             </div>
